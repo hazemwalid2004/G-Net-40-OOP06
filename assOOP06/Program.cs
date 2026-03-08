@@ -20,6 +20,15 @@
             // When would you choose one over the other?
             // interface -> when we make 100% abstract / abstract class -> when we want make partial abstract
             #endregion
+            #region Q3_Part1
+            //a) Can you write: Appliance a = new Appliance("LG"); ? Why or why not?
+            // no becouse we can't make object from abstract class
+            //b) What is the difference between the three methods: PowerConsumption(), Status(), and Label()? Why did the designer make each one abstract, virtual, or concrete?
+            //PowerConsumption() -> this is an abstract method \ Status() - > this is a virtual method \ Label() -> this is  concrete method 
+            // becouse abstract ->  power consumption is calculated differs for each device / virtual - >most devices may use the default status behavior but some of the devices override this method/ concrete-> labeling is the same for all devices
+            //c) If you call Status() on a Toaster object, what will it return? Why?
+            // Standby because the toaster inhert from appliance so the status inhert to in the toaster
+            #endregion
         }
     }
 }
