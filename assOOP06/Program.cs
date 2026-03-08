@@ -29,6 +29,16 @@
             //c) If you call Status() on a Toaster object, what will it return? Why?
             // Standby because the toaster inhert from appliance so the status inhert to in the toaster
             #endregion
+            #region Q4_Part1
+            //a) What is a partial class? Why would a developer split Calculator into two files?
+            // split a single class definition across multiple files adn the compiler merges them into one class/ to Team collaboration and Organize large classes
+            //b) What is a partial method? What happens if the OnCalculated() implementation in Calculator.Logging.cs is deleted — will the code still compile? Why?
+            //declare in one part of a partial class and optionally implemented in another part/the compiler skip it and continue the work 
+            //c) What is an extension method? What are the three rules for writing one?
+            //add new methods to an existing type without modifying its source code/1-static class 2-static method 3- use this in first parameter 
+            //d) What will the following code print?
+            //$20.00
+            #endregion
         }
     }
 }
