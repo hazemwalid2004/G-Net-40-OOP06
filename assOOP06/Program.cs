@@ -39,6 +39,28 @@
             //d) What will the following code print?
             //$20.00
             #endregion
+            #region Part2
+            Cinema cinema = new Cinema();
+            cinema.OpenCinema();
+            //Ticket t = new Ticket("Test", 100);
+            Ticket[] ticket = { new StandardTicket("Inception", 80.00m, "A5"), new VIPTicket("Avengers", 200.00m, true),
+            new IMAXTicket("Dune", 130.00m, false)};
+            foreach (Ticket t in ticket)
+            {
+                t.book();
+                cinema.AddTicket(t);  
+            }
+            cinema.Print();
+            Console.WriteLine("--- Polymorphism: Final Price per Ticket ---");
+            foreach (Ticket t in ticket)
+            {
+                
+                Console.WriteLine($"{t.GetType().Name} => Final Price = {t.PriceAfterTax()}");
+            }
+            ticket[1].receipt();
+            ticket.TotalRevenue();
+            cinema.CloseCinema();
+            #endregion
         }
     }
 }
